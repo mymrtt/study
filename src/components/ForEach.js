@@ -18,7 +18,7 @@ class ForEach extends Component {
     return(
       <Container>
 				<Text blue>ForEach component</Text>
-        <Text>preciso começarrrrrr</Text>
+        <Text>preciso começarrrr</Text>
         <Text blue>ForEach component</Text>
 			</Container>
     );
