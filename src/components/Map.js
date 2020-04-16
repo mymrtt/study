@@ -61,11 +61,25 @@ class Map extends Component {
     });
   }
 
+  //OR
+
+  renderListDestructuring = () => {
+    return this.state.list.map(({ name, age, city }) => (
+      <ContainerList>
+        <Text marginRight>{name}</Text>
+        <Text marginRight>{age}</Text>
+        <Text marginRight>{city}</Text>
+      </ContainerList>
+    ))
+  };
+
   render() {
     return (
 			<Container>
 				<Text blue>Map component</Text>
         { this.renderList() }
+        <span>--------------</span>
+        { this.renderListDestructuring() }
         <Text blue>Map component</Text>
 			</Container>
     );

@@ -14,11 +14,38 @@ const Text = styled.p`
 `;
 
 class ForEach extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      values: [ 1, 2, 3, 4 ]
+    }
+  }
+
+  renderForEach = () => {
+    this.state.values.forEach((i, el) => {
+      if(el === 1) {
+        /* this.state.values[i] = 'teste';
+        this.setState({ values: this.state.values});
+        console.log(this.state.values); */
+
+        /* ou */
+
+        /* this.setState({ 
+          ...this.state.values[this.state.values[i] = 'olha'] 
+        }); */
+
+        /* console.log(this.state.values[i]); */
+      }
+    });
+  }
+
   render() {
     return(
       <Container>
 				<Text blue>ForEach component</Text>
-        <Text>preciso começarrrr</Text>
+        { this.renderForEach() }
+        <Text>*codigo comentado*</Text>
         <Text blue>ForEach component</Text>
 			</Container>
     );

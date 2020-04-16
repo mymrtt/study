@@ -47,7 +47,7 @@ class Errors extends Component {
 	}
 
 	handleName = event => {
-		this.setState({ name: event.target.value });
+		this.setState({ name: event.target.value, error: false });
 	}
 
 	
@@ -60,18 +60,18 @@ class Errors extends Component {
   	}; */
 
  	handleLastName = event => {
-		this.setState({ lastName: event.target.value });
+		this.setState({ lastName: event.target.value, error: false });
 	}
 
 	handlePassword = event => {
-		this.setState({ password: event.target.value });
+		this.setState({ password: event.target.value, error: false });
 	}
 
 	handleSubmit = event => {
 		event.preventDefault();
 
 		if(this.state.password.trim().length > 5) {
-			this.setState({ sucessMessage: true })
+			this.setState({ sucessMessage: true });
 		}
 		else {
 			this.setState({ error: 'errorPassword' });
@@ -84,7 +84,7 @@ class Errors extends Component {
 		}
 	}
 
-	renderSucessMessage = () => <Message> Your data has been sent successfully! :)</Message>
+	renderSucessMessage = () => <Message>Your data has been sent successfully! :)</Message>
 
 	renderForm = () => {
 		return (

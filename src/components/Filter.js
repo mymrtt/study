@@ -47,7 +47,7 @@ class Filter extends Component {
   }
 
   renderFilter = () => {
-    return this.state.list.filter(item => item.city === 'sp').map ((item, index) => {
+    return this.state.list.filter(item => item.city === 'sp').map((item, index) => {
       return (
         <ContainerList
           key={index}  

@@ -60,13 +60,13 @@ class Find extends Component {
     const sec = numbers.find((el) => {
       return el > 6;
     });
-    console.log(sec); 
+    console.log('Find', sec); 
   }
 
 
 	handleFindItem = () => {
 		const find = this.state.list.find( item => item.city === 'brasilia')
-		console.log(find);
+		console.log('find', find);
 	}
 
 
